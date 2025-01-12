@@ -1,0 +1,253 @@
+.wp-generator {
+    width: 100%;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1.4;
+}
+
+@media (max-width: 480px)
+{
+    .col-3,
+    .col-6 {
+        width: 100%;
+    }
+}
+/*========================================================
+===================== Grid css
+========================================================*/
+.grid {
+    display: grid;
+}
+
+.grid-cols-1 {
+    grid-template-columns: repeat(1,minmax(0,1fr));
+}
+
+.gap-6 {
+    gap: 1.5rem;
+}
+.gap-4 {
+    gap: 1rem;
+}
+
+
+@media (min-width: 768px)
+{
+    .md-gap-8 {
+        gap: 2rem;
+    }
+    .md-grid-cols-2 {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+}
+@media (min-width: 1024px)
+{
+    .lg-grid-cols-2 {
+        grid-template-columns: repeat(2,minmax(0,1fr));
+    }
+    .lg-grid-cols-3 {
+        grid-template-columns: repeat(3,minmax(0,1fr));
+    }
+}
+/*====================================================
+========= Tab nav
+====================================================*/
+.nav {
+    background: #0073a9;
+    padding: 22px 45px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgba(179, 179, 179, 0.185);
+    position: relative;
+}
+.tabs {
+    display: flex;
+    align-items: center;
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+    overflow: auto;
+}
+.tab {
+    padding: 10px 25px;
+    background: #fefcf3;
+    color: #0073a9;
+    margin-right: 15px;
+    line-height: 30px;
+    border-radius: 50%;
+    text-align: center;
+    white-space: nowrap;
+    transition: 3s ease width;
+    overflow: hidden;
+    max-width: 0px;
+    cursor: pointer;
+    position: relative;
+    flex-basis: 120px;
+    -webkit-transition: width 1s ease-in-out;
+    -moz-transition: width 1s ease-in-out;
+    -o-transition: width 1s ease-in-out;
+    transition: width 1s ease-in-out;
+}
+.tab__is-active {
+    max-width: initial;
+    box-shadow: 7px 7px 15px rgba(124, 124, 124, 0.096);
+    overflow: initial;
+    border-radius: 30px;
+}
+.tab__is-active .tab_name {
+    opacity: 1;
+}
+.tab_circle {
+    position: absolute;
+    height: 20px;
+    width: 20px;
+    border-radius: 50%;
+    border: 2px solid #58a6ff;
+    z-index: 10;
+    opacity: 0;
+    left: 30px;
+    pointer-events: none;
+}
+.tab_icon {
+    margin-right: 1px;
+    font-size: 16px;
+    vertical-align: middle;
+    position: relative;
+    right: 6.7px;
+    top: -1px;
+}
+.tab_name {
+    font-size: 15px;
+    font-weight: 500;
+    position: relative;
+    transition: 0.3s ease;
+    top: 1px;
+    opacity: 0;
+}
+/*#tab0 {
+    background: #cffcff;
+    color: #00a8b5;
+}
+#tab1 {
+    background: #3F0071;
+    color: #3F0071;
+}
+#tab2 {
+    background: #FB2576;
+    color: #FB2576;
+}
+#tab3 {
+    background: #332FD0;
+    color: #332FD0;
+}
+#tab4 {
+    background: #ffeed5;
+    color: #0002A1;
+}
+#tab5 {
+    background: #ffeed5;
+    color: #FFE15D;
+}
+#tab6 {
+    background: #ffeed5;
+    color: #F49D1A;
+}
+#tab7 {
+    background: #ffeed5;
+    color: #DC3535;
+}
+#tab8 {
+    background: #ffeed5;
+    color: #B01E68;
+}*/
+
+@media (max-width: 767px) {
+    .nav {
+        padding: 20px 20px;
+    }
+}
+/*====================================================
+========= Tab content
+====================================================*/
+#generator_Content {
+    border: 2px solid #f3f1f1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 3px 3px 15px rgb(179 179 179 / 19%);
+    margin: 15px 0;
+}
+#generator_Content .tab-pane {
+    display: none;
+}
+#generator_Content .tab-pane.active {
+    display: block;
+}
+
+/*====================================================
+========= Form group
+====================================================*/
+.wp-generator .form-group {
+    margin-bottom: 15px;
+    /*min-height: 115px;*/
+}
+.wp-generator .form-group label {
+    font-weight: 600;
+    margin-bottom: 5px !important;
+    display: block;
+}
+.wp-generator .form-group .form-control {
+    padding: 8px;
+    height: 38px;
+    width: 100%;
+    margin-bottom: 10px;
+}
+.wp-generator .form-group textarea.form-control {
+    height: auto;
+}
+.form-group .help-block {
+    display: block;
+}
+.wp-generator input[disabled], 
+.wp-generator select[disabled], 
+.wp-generator textarea[disabled], 
+.wp-generator input[readonly], 
+.wp-generator select[readonly], 
+.wp-generator textarea[readonly] {
+    cursor: not-allowed;
+    background-color: #eee !important;
+}
+
+.field-container .field-group-info {
+    background: #0073a90d;
+    padding: 15px;
+    border-radius: 10px;
+    margin-bottom: 15px;
+}
+/*====================================================
+========= buttons
+====================================================*/
+.btn-box {
+    text-align: center;
+}
+.btn-box .btn {
+    background: #000;
+    color: #fff;
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 14px;
+    text-transform: capitalize;
+    font-weight: 400;
+    border-radius: 6px;
+    font-family: sans-serif;
+}
+
+/*====================================================
+========= code print
+====================================================*/
+.section-code {
+    max-width: 1170px !important;
+}
+.section-code .prettyprint {
+    text-align: left;
+    font-size: 14px;
+}
